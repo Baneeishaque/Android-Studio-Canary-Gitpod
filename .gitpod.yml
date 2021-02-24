@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.Dockerfile
+
+# Command to start on workspace startup
+tasks:
+  # - init: gh auth login
+  # - init: ln -s /workspace/Android-Studio-Gitpod/AndroidStudio4.1-Configuration ~/.config/Google/AndroidStudio4.1
+  # - init: ln -s /workspace/Android-Studio-Gitpod/AndroidStudio4.1-Plugins ~/.local/share/Google/AndroidStudio4.1
+  - command: cd /usr/local/android-studio/bin/ && ./studio.sh
+    
+# Ports to expose on workspace startup
+ports:
+  - port: 5900
+    onOpen: ignore
+  - port: 6080
+    onOpen: open-browser
