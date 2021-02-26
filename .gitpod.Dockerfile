@@ -11,8 +11,8 @@ RUN cd $HOME \
  && rmdir cmdline-tools/ \
  && rm $androidCommandLineToolsLinuxInstallationFile
 
-ARG androidStudioDownloadUrl="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2020.3.1.7/android-studio-2020.3.1.7-linux.tar.gz"
-ARG androidStudioInstallationFile="android-studio-2020.3.1.7-linux.tar.gz"
+ARG androidStudioDownloadUrl="https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2020.3.1.8/android-studio-2020.3.1.8-linux.tar.gz"
+ARG androidStudioInstallationFile="android-studio-2020.3.1.8-linux.tar.gz"
 
 # RUN sudo apt-get update \
  # && sudo apt-get install -y \
@@ -24,7 +24,7 @@ RUN cd $HOME \
  && sudo tar -xvf $androidStudioInstallationFile -C /usr/local/ \
  && rm $androidStudioInstallationFile
  
-RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && sdk install java 8.0.242-open /usr/local/android-studio/jre && sdk default java 8.0.242-open"
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && sdk install java 11.0.8-open /usr/local/android-studio/jre && sdk default java 11.0.8-open"
 
 ENV JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 
