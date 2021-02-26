@@ -36,7 +36,7 @@ ARG cmakeVersion="3.10.2.4988404"
 ARG ndkVersion="22.0.7026061"
 
 RUN yes | android-sdk-linux/cmdline-tools/latest/bin/sdkmanager --licenses \
- && android-sdk-linux/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "platforms;androidPlatformPreviewVersion" "build-tools;androidBuildToolsPreviewVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
+ && android-sdk-linux/cmdline-tools/latest/bin/sdkmanager "platforms;$androidPlatformVersion" "build-tools;$androidBuildToolsVersion" "sources;$androidPlatformVersion" "platforms;$androidPlatformPreviewVersion" "build-tools;androidBuildToolsPreviewVersion" "cmake;$cmakeVersion" "ndk;$ndkVersion"
 
 ENV ANDROID_SDK_ROOT="$HOME/android-sdk-linux"
 
